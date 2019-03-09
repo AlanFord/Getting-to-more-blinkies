@@ -19,3 +19,8 @@ A "NODE_F030R8" drive will appear containing a MBED.HTM file.  Open that file an
 the https://os.mbed.com website.  Jump to the compiler and then make sure that your board select is set
 to the Nucleo-F030R8.  After entering your code, compile, and the web page will download the 
 executable bin file.  Drag that over to the board in the file manager and the loader will take over.
+
+The datasheet for the stm32f030r8 indicates that the max current for the i/o pins is 25 mA.  That will easily
+suffice for our little LED/resistor combiniation.  Similar to the work with the Arduino UNO, the LED will be connected
+between ground and digitial IO pin D12 (PA_6) because D13 (PA_5) is already taken up controlling the 
+on-board user LED.
