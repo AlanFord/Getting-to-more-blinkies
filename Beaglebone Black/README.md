@@ -6,6 +6,7 @@ A good source of background is http://derekmolloy.ie/kernel-gpio-programming-but
 The BeagleBone can't supply much power for an LED without potentially jeprodizing the BeagleBone.
 Therefore, we will use a FET between the BeagleBone and the LED.
 
+![Alt text](./schematic.jpg?raw=true "Optional Title")
 ##reference the schematic##
 
 The gpio pin we will be using to control the LED will be pin 23 on the P9 header.  That pin is named GPIO1_17, but 
@@ -14,9 +15,9 @@ is known to the linux kernel as gpio49.  Why gpio49?  The gpio pins of the Beagl
 So gpio pin 17 in the GPIO1 register is 17+1*(32) = 49, or gpio49.
 
 In summary, that particular connection on the BeagleBone Black can be referred to as:
-Pin 23 on the P9 Header (the board physical configuration)
-GPIO1_17 (the processor configuration of pin 17 in GPIO Group 1)
-GPIO49 (as Linux sees it)
+* Pin 23 on the P9 Header (the board physical configuration)
+* GPIO1_17 (the processor configuration of pin 17 in GPIO Group 1)
+* GPIO49 (as Linux sees it)
 
 The LED can be flashed from the command line using the following:
     cd /sys/class/gpio
