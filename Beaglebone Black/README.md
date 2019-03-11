@@ -6,7 +6,7 @@ A good source of background is http://derekmolloy.ie/kernel-gpio-programming-but
 The BeagleBone can't supply much power for an LED without potentially jeprodizing the BeagleBone.
 Therefore, we will use a FET between the BeagleBone and the LED.
 
-![Alt text](./schematic.jpg?raw=true "Optional Title")
+![schematic](schematic.jpg)
 ##reference the schematic##
 
 The gpio pin we will be using to control the LED will be pin 23 on the P9 header.  That pin is named GPIO1_17, but 
