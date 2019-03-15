@@ -29,3 +29,13 @@ The LED can be flashed from the command line using the following:
     cd ..
     echo 49 >unexport
     
+These commands have been captured in two shell scripts that meet the goals of "Getting to Blinky" - 
+*blink.sh* and *cleanup.sh*.  Both scripts will need to be run as root.  An easy way to do this is to run the
+command *sudo bash* to switch to root before running the scripts.
+
+*blink.sh* sets up gpio pin 49 and starts the blinking.  Use CTRL-C to stop the 
+script.  The LED may be left off or on, depending on the state of the script when it is terminated.
+
+Run the script *cleanup.sh* to unexport the gpio pin and shut down the LED.
+
+
