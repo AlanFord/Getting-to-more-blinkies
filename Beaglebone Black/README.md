@@ -20,6 +20,7 @@ In summary, that particular connection on the BeagleBone Black can be referred t
 * GPIO49 (as Linux sees it)
 
 The LED can be flashed from the command line using the following:
+```
     cd /sys/class/gpio
     echo 49 > export
     cd gpio49
@@ -28,7 +29,7 @@ The LED can be flashed from the command line using the following:
     echo 0 > value
     cd ..
     echo 49 >unexport
-    
+```    
 These commands have been captured in two shell scripts that meet the goals of "Getting to Blinky" - 
 *blink.sh* and *cleanup.sh*.  Both scripts will need to be run as root.  An easy way to do this is to run the
 command *sudo bash* to switch to root before running the scripts.
