@@ -11,10 +11,12 @@ An external LED can be hooked up to a choice of pins, as long as the selected
 pin is capable of digital output.  Pins in OUTPUT mode are in a low-impendance state,
 capable of providing or sinking up to 40 mA of current.
 
+This project uses an ATMEGA328P-PU, similar to the generic ATMEGA328 but requires a little less power.
+However, they do have different chip signatures so must be specified differently during compilation.
 
-<<<<<  The following needs updating >>>>>>>
-Digital pin 13 is convenient (as it's right next to a ground pin), but it's pre-wired
-to the built-in LED.  So we will use digital pin 12 for our own LED.
+The equivalent to the Digital pin 12 used in the Arduino Blinky sketch is Port B Pin 4 (the ATmega328 uses the same pin mapping
+as the ATmega168).  So we will use Port B Pin 4 (or PB4) for our own LED. Note that on the 28-pin DIP package
+PB4 is mapped to pin 18.
 
 My go-to LED is a red through-hole LED with a resistor soldered onto the cathode.  The arrangement is constructed
 by clipping the LED cathode lead short (about 1 cm) and then clipping one lead of the resistor as well.  The two

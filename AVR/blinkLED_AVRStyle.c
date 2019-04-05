@@ -3,11 +3,11 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-#define LED      PB0
+#define LED      PB4    // equivalent to Arduino Digital Pin 12
 #define LED_DDR  DDRB
 #define LED_PORT PORTB
 
-#define DELAYTIME 200
+#define DELAYTIME 1000
 
 #define setBit(sfr, bit)     (_SFR_BYTE(sfr) |= (1 << bit))
 #define clearBit(sfr, bit)   (_SFR_BYTE(sfr) &= ~(1 << bit))
