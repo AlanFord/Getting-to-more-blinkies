@@ -3,7 +3,7 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-#define LED      PB4    // equivalent to Arduino Digital Pin 12
+#define LED      PB6    // equivalent to Arduino Digital Pin 12
 #define LED_DDR  DDRB
 #define LED_PORT PORTB
 
