@@ -19,7 +19,7 @@ as the ATmega168).  Unfortunately, Port B Pin 4 is also used during programming 
 So we will use Port B Pin 6 (or PB6) for our own LED. Note that on the 28-pin DIP package
 PB6 is mapped to pin 9.
 
-![ATmega328p pinout](./schematic.png)
+![ATmega328p pinout](https://github.com/AlanFord/Getting-to-more-blinkies/blob/master/AVR/ATMega328P-Pinout.png)
 
 My go-to LED is a red through-hole LED with a resistor soldered onto the cathode.  The arrangement is constructed
 by clipping the LED cathode lead short (about 1 cm) and then clipping one lead of the resistor as well.  The two
