@@ -40,7 +40,7 @@ be summarized (using ST32CUBEMX) as
 
 The pins in green have been changed from their default layout.  A summary of the changes:
 
-|Pin|Default|Alt|
+|Pin|Default Function |Alternate Function |
 |----|---|---|
 | 2   |  PC13 |     |
 | 5   | PF0 | RCC_OSC_IN |
