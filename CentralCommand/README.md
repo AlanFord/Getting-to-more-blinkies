@@ -32,11 +32,11 @@ requires the use of a number of alternate functions for several pins.
 
 The default pin layout is
 
-![pin layout](../CentralCommand/Pinout.png)
+![pin layout](../CentralCommand/DefaultPinout.png)
 
 The pin layout for Central Command can
 be summarized (using ST32CUBEMX) as
-![pin layout](../CentralCommand/DefaultPinout.png)
+![pin layout](../CentralCommand/Pinout.png)
 
 The datasheet for the stm32f030r8 mcu indicates that the max current for the i/o pins is 25 mA.  That will easily
 suffice for our little LED/resistor combiniation.  Similar to the work with the Arduino UNO, the LED will be connected
