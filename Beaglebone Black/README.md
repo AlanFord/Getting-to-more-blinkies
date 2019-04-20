@@ -8,7 +8,7 @@ programming a PRU.  Each is stored in a different folder.
 The BeagleBone can't supply much power for an LED without potentially jeprodizing the BeagleBone.
 Therefore, we will use a FET between the BeagleBone and the LED, as shown in the following figure.
 
-![schematic](https://github.com/AlanFord/Getting-to-more-blinkies/blob/master/Beaglebone%20Black/schematic.png)
+![schematic](../Beaglebone%20Black/schematic.png)
 
 The gpio pin we will be using to control the LED will be pin 23 on the P9 header.  That pin is named GPIO1_17, but 
 is known to the linux kernel as gpio49.  Why gpio49?  The gpio pins of the BeagleBone Black are grouped into 
