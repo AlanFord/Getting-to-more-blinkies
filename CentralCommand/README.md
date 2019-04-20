@@ -38,7 +38,42 @@ The pin layout for Central Command can
 be summarized (using ST32CUBEMX) as
 ![pin layout](../CentralCommand/Pinout.png)
 
-The datasheet for the stm32f030r8 mcu indicates that the max current for the i/o pins is 25 mA.  That will easily
-suffice for our little LED/resistor combiniation.  Similar to the work with the Arduino UNO, the LED will be connected
-between ground and digitial IO pin D12 (PA_6) because D13 (PA_5) is already taken up controlling the 
-on-board user LED.
+The pins in green have been changed from their default layout.  A summary of the changes:
+
+|Pin|Default|Alt|
+|----|---|---|
+| 2   |  PC13 |     |
+| 5   | PF0 | RCC_OSC_IN |
+| 6   | PF1 | RCC_OSC_OUT |
+| 11 | PA1 | ADC_IN1 |
+| 12 | PA2 | USART2_TX (AF1) |
+| 13 | PA3 | USART2_RX (AF1) |
+| 18 | PB0 | ADC_IN8 |
+| 19 | PB1 | ADC_IN9 |
+| 29 | PA8 | RCC_MCO (AF0) |
+| 30 | PA9 | USART1_TX (AF1) |
+| 31 | PA10 | USART1_RX (AF1) |
+| 34 | PA13 | SYS_SWDIO (AF0) |
+| 35 | PF6 | I2C2_SCL |
+| 36 | PF7 | I2C2_SDA |
+| 37 | PA14 | SYS_SWCLK (AF0) |
+| 38 | PA15 | SPI1_NSS (AF0) |
+| 39 | PB3 | SPI1_SCK (AF0) |
+| 40 | PB4 | SPI1_MISO (AF0) |
+| 41 | PB5 | SPI1_MOSI (AF0) |
+| 42 | PB6 | I2C1_SCL (AF1) |
+| 43 | PB7 | I2C1_SDA (AF1) |
+
+Pin 2 still has its default assignment, but has been modified for GPIO output
+(Push Pull output and no pull-up or pull-down resistors).  Note that Pin 2 (PC13)
+has a very limited capability to supply power (3 mA).  Don't use it to drive an LED
+unless a FET is used.
+
+Pins 35 and 36 are unusual in this package and only have one Alternate Function to select.
+Pins 5, 6, 11, 18,  and 19 are not being used for Alternate Functions, but rather Additional Functions
+(not my nomenclature, believe me).
+
+## Cube Work
+Yes, the pin configuration discussion was painful, but it's over.
+
+
