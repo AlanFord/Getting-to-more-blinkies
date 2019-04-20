@@ -11,8 +11,8 @@ development boards.  With only one judicious jumper selection, the ST-LINK/V2-1 
 home-brew boards built around the STmicro chips.
 
 ## Central Command
-The schematics are found in [schematics](../blob/master/CentralCommand/Central Command Schematic.pdf) 
-and the board layout is found in [schematics](../blob/master/CentralCommand/Central Command Layout.pdf).  
+The schematics are found in [Central Command Schematic.pdf](https://github.com/AlanFord/Getting-to-more-blinkies/blob/master/CentralCommand/Central%20Command%20Schematic.pdf) 
+and the board layout is found in [Central Command Layout.pdf](https://github.com/AlanFord/Getting-to-more-blinkies/blob/master/CentralCommand/Central%20Command%20Layout.pdf).  
 Header P101 breaks out I2C2 peripheral for 
 an I2C sensor connection.  Headers P302 and P303 provide chained I2C connections for external boards over
 the I2C1 peripheral.  USART1 and SPI connections are available on headers P104 and P105, respectively.  The USART2 
