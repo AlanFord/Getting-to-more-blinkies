@@ -24,12 +24,33 @@ code for toggling the on-board LED.
 /* -3- Toggle IOs in an infinite loop */
 while (1)
 {
-HAL_GPIO_TogglePin(LED2_GPIO_PORT, LED2_PIN);
-/* Insert delay 100 ms */
-HAL_Delay(100);
+    HAL_GPIO_TogglePin(LED2_GPIO_PORT, LED2_PIN);
+    /* Insert delay 100 ms */
+    HAL_Delay(100);
 }
 ```
 The on-board user LED (LED2) is connected to connector CN5, pin 6, also known as Arduino
 pin D13 and STM32 pin PA5.  For this work we will use CN5 pin 5 (Arduino pin D12 and
-STM32 pin PA6).
+STM32 pin PA6).  Hence, the code is changed to:
+```
+/* -3- Toggle IOs in an infinite loop */
+while (1)
+{
+    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_6);
+    /* Insert delay 1000 ms */
+    HAL_Delay(1000);
+}
+```
+One other statement should also be changed.  The original code enables the clock for the on-board LED
+gpio pin using the statement
+```
+LED2_GPIO_CLK_ENABLE();
+```
+As we are using pin PA6 in lieu of LED2, the statement is changed to
+```
+__HAL_RCC_GPIOA_CLK_ENABLE();
+```
+This makes the code cleaner, but wasn't really necessary, as LED2 is also on GPIOA and the two statements
+are functionally identical.
+
 
