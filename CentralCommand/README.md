@@ -86,7 +86,7 @@ are moved to the appropriate position, the STLINK does not communicate with the 
 connected via a set of header pins.  
 
 Here is a shot of the programming interface on an STM32NUCLEO board (in this case a NUCLEO-F103RB).
-![programmer layout](../CentralCommand/header.png)
+![programmer layout](../CentralCommand/header.jpg)
 
 To use the ST-LINK programmer for the CentralCommand board, the first thing that must be done is to remove the two
 jumpers shown in the center-left of the image.  To avoid losing the jumpers, they can be turned to the side so that each
