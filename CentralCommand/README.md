@@ -79,7 +79,7 @@ Yes, the pin configuration discussion was painful, but it's over.  As to flashin
 PB10 (pin 21).  The programming details are discussed in the READMEs located in the folders HAL, LL, and CMSIS - the 
 three approaches used for programming.  However, the hardware used for programming is common to all three.
 
-(Note:  cudos to JEELABS, https://jeelabs.org/book/1547a/ for helping me understand all of this.)
+(Note:  kudos to JEELABS, https://jeelabs.org/book/1547a/ for helping me understand all of this.)
 
 Programming is performed using the ST-LINK portion of a NUCLEO board (in this case, a NUCLEO-F030R8).  Once a set of jumpers
 are moved to the appropriate position, the STLINK does not communicate with the NUCLEO board but with the CentralCommand
