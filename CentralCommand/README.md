@@ -74,7 +74,7 @@ Pins 35 and 36 are unusual in this package and only have one Alternate Function 
 Pins 5, 6, 11, 18,  and 19 are not being used for Alternate Functions, but rather Additional Functions
 (not my nomenclature, believe me).
 
-## Finally
+## Let's Get Wired
 Yes, the pin configuration discussion was painful, but it's over.  As to flashing an LED, we will use the on-board LED on
 PB10 (pin 21).  The programming details are discussed in the READMEs located in the folders HAL, LL, and CMSIS - the 
 three approaches used for programming.  However, the hardware used for programming is common to all three.
@@ -104,4 +104,18 @@ on the ST-LINK is labeled CN4 and is on the left side of the previous image.  Th
 The cable connects to the P301 header on the CentralCommand (shown on both the schematics and the layout images).
 The P301 header is located on the right of the bottom edge of the board.  The pins are labeled on the reverse side of the board.
 Note that Pin 6 isn't connected anything. 
+
+## Now, Pick a Flavor
+Ready, Set, Go!  Three flavors of code to blink an LED are presented.  At the highest level is the HAL folder.  The basic project
+was created using STM32CubeMX using "HAL" options in the Project Manager, Advanced Setting tab.  HAL is STMicro's 
+"Hardware Abstraction Layer", a very convenient high level library (some say too convenient and a little bulky).  
+
+A level down is the LL folder.  The basic project
+was created using STM32CubeMX using "LL" options in the Project Manager, Advanced Setting tab.  LL is STMicro's 
+"Low-Layer API", a library providing function calls that stay much closer to the physical hardware.  A little more work and
+a few referals to the data sheets are necessar.
+
+All the way down is the CMSIS folder.  This project was created in TrueStudio itself and doesn't really use a STMicro API.  It does
+reference a number of defined constants and macros provided in the Cortex Microcontroller Software Interface 
+Standard (CMSIS), a vendor-independent hardware abstraction layer for the Cortex-M processor series. 
 
