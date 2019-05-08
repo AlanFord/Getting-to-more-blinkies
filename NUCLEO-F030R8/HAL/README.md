@@ -53,4 +53,18 @@ __HAL_RCC_GPIOA_CLK_ENABLE();
 This makes the code cleaner, but wasn't really necessary, as LED2 is also on GPIOA and the two statements
 are functionally identical.
 
+## Getting it on the Nucleo Board
+
+The project configuration built by TrueStudio can be a little sparse, not really configured for getting your
+software onto the board, but that can be fixed.  Copying the software to the USB-mounted board can be 
+done if you have a hex file.  To get a hex file, add the following line as a post-build step in the project
+build settings under "C/C++Build-->Settings":
+```
+arm-atollic-eabi-objcopy -O ihex "${BuildArtifactFileBaseName}.elf" "${BuildArtifactFileBaseName}.hex"
+```
+This hex file can be copied to the Nucleo board for programming. 
+
+For debugging, a Debug Configuration should be configured.  The easiest way is to copy one that works from an existing
+project, changing the Name, C/C++ Application, and Project fields on the "Main" tab.  Also kick over to the 
+"Common" tab and change the folder name in the "Save as Shared file" field, if it's used.
 
