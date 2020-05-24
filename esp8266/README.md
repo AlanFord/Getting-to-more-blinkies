@@ -6,9 +6,10 @@ Sidenote - a good introduction to programming the ESP8266, including web develop
 https://ludzinc.blogspot.com/2019/07/easier-esp8266-development.html
 
 First, note that the program (or really a fragment) must be kept in a directory (folder)
-of the same name.  Hence the subdirectory "getting-to-blinky" that contains the program
+of the same name.  Hence the subdirectory "blink" that contains the program
 of the same name.
 
+## Auto
 This program is going to be really simple - primarily a stripped-down version
 of one of the sample programs.  So why do it?  The primary purpose is to capture all
 of the details associated with just getting the Arduino IDE to talk to the board.
@@ -27,3 +28,7 @@ Tools > CPU Frequency > 80 Mhz
 Tools > Upload Speed > 921600 
 Tools > Port > /dev/cu.SLAB_USBtoUART 
 * Compile the program and start Blinking!
+
+## Manual
+This program is going to be more complicated - I want to demonstrate a web server that presents a 
+web page.  The page will provide radio buttons for controlling the LED.
