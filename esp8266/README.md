@@ -22,11 +22,11 @@ sudo rm -rf /Library/Extensions/usbserial.kext
 * Add the ESP8266 board to the Arduino IDE following the instructions at 
 https://randomnerdtutorials.com/esp8266-web-server/
 * For my board, the following was really important.
-Tools > Board > NodeMCU 1.0 (ESP-12E Module) 
-Tools > Flash Size > 4M (3M SPIFFS) 
-Tools > CPU Frequency > 80 Mhz 
-Tools > Upload Speed > 921600 
-Tools > Port > /dev/cu.SLAB_USBtoUART 
+- Tools > Board > NodeMCU 1.0 (ESP-12E Module) 
+- Tools > Flash Size > 4M (3M SPIFFS) 
+- Tools > CPU Frequency > 80 Mhz 
+- Tools > Upload Speed > 921600 
+- Tools > Port > /dev/cu.SLAB_USBtoUART 
 * Compile the program and start Blinking!
 
 ## Manual
