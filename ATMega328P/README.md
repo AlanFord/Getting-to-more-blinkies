@@ -19,7 +19,7 @@ as the ATmega168).  Unfortunately, Port B Pin 4 is also used during programming 
 So we will use Port B Pin 6 (or PB6) for our own LED. Note that on the 28-pin DIP package
 PB6 is mapped to pin 9.
 
-![ATmega328p pinout](../AVR/ATMega328P-Pinout.png)
+![pinout]
 
 My go-to LED is a red through-hole LED with a resistor soldered onto the cathode.  The arrangement is constructed
 by clipping the LED cathode lead short (about 1 cm) and then clipping one lead of the resistor as well.  The two
@@ -64,4 +64,7 @@ Pretty simple - the following commands will get the job done:
 make all
 make flash
 ```
+
+<!-- Images -->
+[pinout]:                /ATMega328P/ATMega328P-Pinout.png                "ATMega328P pinout diagram"
 
