@@ -13,21 +13,21 @@ of the same name.
 This program is going to be really simple - primarily a stripped-down version
 of one of the sample programs.  So why do it?  The primary purpose is to capture all
 of the details associated with just getting the Arduino IDE to talk to the board.
-I'm using a NODEMCU generic knockoff.  As such, on my Mac I needed to
-* Install the latest Silicon Labs USB-USART driver - see 
+I'm using a NODEMCU generic knockoff.  As such, on my Mac I needed to:
+1. Install the latest Silicon Labs USB-USART driver - see 
 https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
-* If you have installed an old kext to handle usb-to-serial communications (needed on
+2. If you have installed an old kext to handle usb-to-serial communications (needed on
 older OSX), delete it with the command:
 sudo rm -rf /Library/Extensions/usbserial.kext
-* Add the ESP8266 board to the Arduino IDE following the instructions at 
+3. Add the ESP8266 board to the Arduino IDE following the instructions at 
 https://randomnerdtutorials.com/esp8266-web-server/
-* For my board, the following was really important.
-- Tools > Board > NodeMCU 1.0 (ESP-12E Module) 
-- Tools > Flash Size > 4M (3M SPIFFS) 
-- Tools > CPU Frequency > 80 Mhz 
-- Tools > Upload Speed > 921600 
-- Tools > Port > /dev/cu.SLAB_USBtoUART 
-* Compile the program and start Blinking!
+4. For my board, the following was really important.
+  * Tools > Board > NodeMCU 1.0 (ESP-12E Module) 
+  * Tools > Flash Size > 4M (3M SPIFFS) 
+  * Tools > CPU Frequency > 80 Mhz 
+  * Tools > Upload Speed > 921600 
+  * Tools > Port > /dev/cu.SLAB_USBtoUART 
+5. Compile the program and start Blinking!
 
 ## Manual
 This program is going to be more complicated - I want to demonstrate a web server that presents a 
